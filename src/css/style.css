@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+html {
+    font-size: 65.5%;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header header header header"
+        "hero hero hero hero"
+        "about about about about"
+        "services services services services"
+        "clients clients clients clients"
+        "projects projects projects projects"
+        "footer footer footer footer";
+
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 1.6rem;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+}
+
+.header {
+    grid-area: header;
+    background-color: #40bcfc;
+}
+
+.header .header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+    min-height: 75px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    transition: ease-in-out 0.2s;
+    color: #fff;
+}
+
+.services {
+    grid-area: services;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 75vh;
+}
+
+.services div {
+    transition: ease-in-out 0.2s;
+}
+
+.services div:hover {
+    opacity: 0.8;
+}
+
+.item-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-service p {
+    max-width: 50%;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #295f54;
+}
+
+.item-service h3 {
+    margin-top: 35%;
+    margin-bottom: 50px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.clients {
+    grid-area: clients;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+.clients .container-clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clients h3 {
+    margin-bottom: 40px;
+    font-weight: 900;
+    opacity: 0.5;
+    letter-spacing: 4px;
+    font-family: "Ancizar Serif", serif;
+}
+
+.clients .container-clients article {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.clients .container-clients article p {
+    text-align: center;
+    padding: 30px 0;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.clients .container-clients article span {
+    text-align: center;
+    opacity: 0.5;
+}
+
+.clients .container-clients article img {
+    border-radius: 100%;
+    width: 70px;
+}
+
+.clients .container-clients article footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clients .container-clients article footer h2 {
+    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+}
+
+@media (max-width: 750px) {
+    .clients .container-clients {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .clients .container-clients article {
+        padding: 30px;
+    }
+
+    .clients .container-clients article {
+        width: 400px;
+    }
+}
+
+@media (max-width: 650px) {
+    section.services {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        height: 140vh;
+
+    }
+
+    .item-service h3 {
+        margin-top: 200px;
+        margin-bottom: 40px;
+    }
+
+    .item-service {
+        padding: 10px;
+    }
+
+    .item-service p {
+        max-width: 80%;
+    }
+}
+
+.graphic-design {
+    background: url('../images/desktop/image-graphic-design.jpg') center center no-repeat;
+    background-size: cover;
+    color: #295f54;
+}
+
+.photography {
+    background: url('../images/desktop/image-photography.jpg') center center no-repeat;
+    background-size: cover;
+    color: #215269;
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #98d4c4;
+}
+
+.footer h2 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    color: #2c7566;
+    margin-top: 30px;
+}
+
+.footer nav a {
+    color: #2c7566;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer nav {
+    margin: 40px 0;
+}
+
+@media(max-width: 425px) {
+    .footer nav.site-navigation a {
+        margin: 0 5px;
+    }
+}
+
+.footer .social-media a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: ease-in-out 0.2s;
+}
+
+.footer .social-media a:hover {
+    transform: translateY(-10px);
+}
+
+.footer .site-navigation a {
+    margin: 0 25px;
+}
+
+.hero {
+    grid-area: hero;
+    height: 89vh;
+    background: url('.././images/desktop/image-header.jpg') center center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero h2 {
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    cursor: default;
+    transition: ease-in-out 0.2s;
+
+}
+
+.hero h2::after {
+    content: "";
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+    background-color: #fff;
+    height: 2px;
+    width: 0%;
+    transition: ease-in-out 0.3s;
+}
+.hero h2:hover{
+    transform: translateY(-10px);
+}
+.hero h2:hover::after {
+    width: 100%;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 40px;
+    width: 40px;
+    height: 50px;
+    background: url('../images/icon-arrow-down.svg') no-repeat center;
+    background-size: contain;
+    animation: downarrow 0.6s infinite alternate ease-in-out;
+}
+
+@keyframes downarrow {
+    0% {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+
+    100% {
+        transform: translateY(-20px);
+        opacity: 50%;
+    }
+}
+
+.projects {
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 60vh;
+}
+
+.projects div {
+    transition: ease-in-out 0.15s;
+}
+
+.projects div:hover {
+    opacity: 0.8;
+}
+
+.projects .milk {
+    background: url('../images/desktop/image-gallery-milkbottles.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.projects .orange {
+    background: url('../images/desktop/image-gallery-orange.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.projects .cone {
+    background: url('../images/desktop/image-gallery-cone.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.projects .sugarcubes {
+    background: url('../images/desktop/image-gallery-sugarcubes.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 650px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        height: 100vh;
+    }
+}
+
+.about {
+    grid-area: about;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: rgb(250, 250, 252);
+    max-width: var(--max-width-size);
+    margin: 0 auto;
+}
+
+.about .item {
+    padding: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.about .image {
+    height: 100%;
+    width: 100%;
+}
+
+.about .item h3 {
+    font-weight: 700;
+    font-size: 4rem;
+    font-family: "Poppins", serif;
+}
+
+
+.about .item p {
+    font-size: 1.8rem;
+    margin: 30px 0;
+    font-weight: 200;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.2;
+}
+
+.about .item .btn-know-more {
+    font-size: 1.6rem;
+    transition: ease-in-out 0.1s;
+    align-self: flex-start;
+}
+
+.about .item .btn-know-more:hover {
+    font-weight: 700;
+}
+
+.about .right {
+    background: url('../images/desktop/image-transform.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.about .left {
+    background: url('../images/desktop/image-stand-out.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 650px) {
+    .about .item {
+        text-align: center;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+}
+
+.header .menu {
+    display: none;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+}
+
+.header nav label {
+    display: flex;
+    flex-direction: column;
+}
+
+.header .hamburguer {
+    background-color: #fff;
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 2px;
+    top: 29px;
+    left: 15px;
+    transition: ease-in-out 0.5s;
+}
+
+.header .hamburguer::before,
+.hamburguer::after {
+    background-color: #fff;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+}
+
+.header .hamburguer::before {
+    top: -10px;
+}
+
+.header .hamburguer::after {
+    top: 10px;
+}
+
+.header input {
+    display: none;
+}
+
+.header input:checked~label .hamburguer {
+    transform: rotate(45deg);
+}
+
+.header input:checked~label .hamburguer::before {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+.header input:checked~label .hamburguer::after {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+@media (max-width: 500px) {
+    .hero {
+        height: 89vh;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+    .header .menu {
+        display: block;
+    }
+
+    header.header nav ul {
+        display: none;
+        width: 200px;
+        background-color: #fff;
+        padding: 20px;
+    }
+
+    .header input:checked~ul {
+        display: block;
+    }
+
+    .header nav {
+        position: absolute;
+        top: 8px;
+        right: 20px;
+        z-index: 1;
+
+    }
+
+    header.header nav ul li a {
+        text-align: center;
+        padding: 20px;
+        display: block;
+        color: #000;
+    }
+
+    header.header nav ul li a:hover {
+        background-color: #fff;
+        color: #000;
+    }
+
+}
