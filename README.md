@@ -1,4 +1,4 @@
-# 🚀 Landing Page Simples com HTML e CSS
+# 🚀 Landing Page com HTML e CSS
 
 Este projeto é uma **landing page responsiva** desenvolvida apenas com **HTML5** e **CSS3**.
 
